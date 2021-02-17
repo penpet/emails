@@ -12,7 +12,7 @@ import { join } from 'path'
 if (!(config.region = process.env.AWS_REGION))
 	throw new Error('Missing AWS region')
 
-import { readFolder, readFile, createTemplate, sleep } from './utils'
+import { readFolder, readFile, uploadTemplate, sleep } from './utils'
 import { TEMPLATES } from './constants'
 
 const main = async () => {
@@ -40,7 +40,7 @@ const main = async () => {
 		const subject = loadHtml(html)('title').text()
 		if (!subject) throw new Error('Missing subject')
 
-		await createTemplate({
+		await uploadTemplate({
 			TemplateName: name,
 			SubjectPart: subject,
 			HtmlPart: html,

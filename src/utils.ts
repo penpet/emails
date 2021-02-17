@@ -17,7 +17,7 @@ export const readFile = (path: string) =>
 		})
 	})
 
-export const createTemplate = (template: SES.Template) =>
+export const uploadTemplate = (template: SES.Template) =>
 	new Promise<void>((resolve, reject) => {
 		ses.createTemplate({ Template: template }, error => {
 			if (!error) return resolve()
