@@ -1,0 +1,52 @@
+<mjml>
+	<mj-head>
+		<mj-font
+			name="OperatorMono"
+			href="https://pen.pet/fonts/OperatorMono.css"
+		/>
+		<mj-attributes>
+			<mj-all
+				padding-top="0"
+				padding-bottom="0"
+				font-family="OperatorMono, monospace"
+				font-weight="900"
+			/>
+			<mj-text color="white" />
+		</mj-attributes>
+		<mj-title>{{from}} invited you to {{role}} {{pen}}</mj-title>
+	</mj-head>
+	<mj-body background-color="#292d3e">
+		<mj-section
+			padding-top="30px"
+			padding-bottom="15px"
+			border-bottom="1px solid rgba(255, 255, 255, 0.1)"
+		>
+			<mj-column>
+				<mj-text font-size="24px">
+					<a href="https://pen.pet" style="text-decoration: none; color: white">
+						penpet
+					</a>
+				</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-section padding-top="30px" padding-bottom="30px">
+			<mj-column>
+				<mj-text font-size="30px">Hello, {{to}}</mj-text>
+				<mj-text padding-top="20px" font-size="20px">
+					{{from}} invited you to {{role}} {{pen}}
+				</mj-text>
+				<mj-button
+					href="https://pen.pet/i/{{id}}"
+					align="left"
+					padding-top="30px"
+					font-size="16px"
+					font-weight="900"
+					background-color="#f85ea1"
+					border-radius="8px"
+				>
+					accept invite
+				</mj-button>
+			</mj-column>
+		</mj-section>
+	</mj-body>
+</mjml>
